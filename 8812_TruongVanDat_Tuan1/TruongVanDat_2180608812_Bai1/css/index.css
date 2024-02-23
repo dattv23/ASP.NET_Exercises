@@ -1,0 +1,221 @@
+﻿/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img, picture, video, canvas, svg {
+    display: block;
+    max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input, button, textarea, select {
+    font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p, h1, h2, h3, h4, h5, h6 {
+    overflow-wrap: break-word;
+}
+/*
+  8. Create a root stacking context
+*/
+#root, #__next {
+    isolation: isolate;
+}
+
+header {
+    padding: 9px 195px;
+    width: 100%;
+}
+
+header, .header-left, .header-right {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+}
+
+    .header-left p:nth-child(2), .header-right p:nth-child(2) {
+        padding: 0px 15px;
+        border-left: 1px solid #ccc;
+        border-right: 1px solid #ccc;
+    }
+
+    .header-right p:nth-child(3) {
+        padding-right: 15px;
+        border-right: 1px solid #ccc;
+    }
+
+    .header-right div {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+    }
+
+    .header-right ion-icon {
+        cursor: pointer;
+        font-size: 24px;
+    }
+
+    .header-right a {
+        text-decoration: none;
+        color: black;
+    }
+
+nav {
+    border-top: 1px solid #cccc;
+    border-bottom: 1px solid #cccc;
+}
+
+nav ul {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1440px;
+    margin: 0 auto;
+    padding: 16px 0px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+nav ul li a:hover {
+    color: #b52759;
+}
+
+nav ul li:first-child {
+    border-radius: 50%;
+    background-color: #ccc;
+        
+    font-size: 18px;
+}
+
+nav ul li:first-child a {
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.top-story {
+    width: 100%;
+    max-width: 1130px;
+    padding: 10px 0px;
+    margin: 0 auto;
+    display: flex;
+}
+
+.top-story div {
+    flex: 0.7;
+}
+
+.top-story aside {
+    flex: 0.3;
+}
+
+.top-story aside img {
+    height: 100%;
+}
+
+.story-top, .story-bottom {
+    display: flex;
+    gap: 20px;
+    padding: 20px 0px;
+    border-bottom: 1px solid #ccc;
+}
+
+.story-top img {
+    width: 520px;
+    height: 312px;
+}
+
+.story-top p {
+    margin-top: 10px;
+    font-size: 14px;
+}
+
+.story-bottom {
+    padding-bottom: 25px;
+}
+
+.story-bottom h4 {
+    margin-bottom: 10px;
+}
+
+.story-bottom .view {
+    padding: 0px 10px;
+}
+
+.story-bottom .view .tag {
+    font-size: 14px;
+    line-height: 16px;
+    color: #9f224e;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+.story-bottom .view a {
+    font-size: 15px;
+    font-weight: 700;
+    margin-bottom: 0;
+    text-decoration: none;
+    color: black;
+}
+
+.story-bottom .view .description {
+    font-size: 14px;
+    line-height: 140%;
+    margin-top: 5px;
+    color: #4f4f4f;
+}
+
+.story-bottom .view .author {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    padding: 0px 10px;
+}
+
+.story-bottom .view .author div {
+    flex: 1;
+}
+
+.story-bottom .view .author div .name {
+    font-size: 16px;
+    color: #757575;
+    font-style: italic;
+}
+
+.story-bottom .view .author img {
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    float: right;
+}
