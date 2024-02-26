@@ -1,0 +1,280 @@
+﻿/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+/*
+  2. Remove default margin
+*/
+* {
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+    line-height: 1.5;
+    -webkit-font-smoothing: antialiased;
+}
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+    isolation: isolate;
+}
+
+a {
+    font-size: 18px;
+    line-height: 24px;
+    color: #222;
+    text-decoration: none;
+}
+
+    a:hover {
+        color: #c90009;
+    }
+
+.container {
+    width: 1310px !important;
+    margin-right: auto;
+    margin-left: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.banner {
+    display: flex;
+    justify-content: center;
+}
+
+header {
+    background-color: #c90009;
+}
+
+    header .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: 48px;
+    }
+
+.container div {
+    display: flex;
+    align-items: center;
+}
+
+header .container ul li {
+    list-style-type: none;
+    display: inline-block;
+}
+
+    header .container ul li a {
+        color: white;
+        padding: 0 12px;
+        border-right: 1px solid #ed1c24;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 20px;
+        display: flex;
+        align-items: center;
+    }
+
+    header .container ul li ion-icon,
+    header .container ul li i {
+        color: #dddd;
+        margin-right: 4px;
+    }
+
+header .container ion-icon {
+    color: white;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+header .container img {
+    background-color: #c90009;
+    color: aliceblue;
+}
+
+header .container > div > div {
+    display: flex;
+    align-items: center;
+    margin-left: 12px;
+    gap: 10px;
+}
+
+    header .container > div > div > ion-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+    header .container > div > div > button {
+        background-color: #5580df;
+        border-radius: 4px;
+        font-size: 13px;
+        color: #fff;
+        padding: 4px 16px;
+        margin-left: 8px;
+        font-weight: 500;
+        border: none;
+        cursor: pointer;
+    }
+
+nav {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+    background: #fff;
+}
+
+    nav > ul {
+        padding-left: 0;
+        width: 100%;
+    }
+
+        nav > ul > li {
+            display: inline-block;
+            list-style-type: none;
+        }
+
+            nav > ul > li > a {
+                padding: 8px 0;
+                font-weight: 500;
+                font-size: 12px;
+                line-height: 18px;
+                text-transform: uppercase;
+                color: #222;
+                display: flex;
+                align-items: center;
+                margin-right: 20.4px;
+                white-space: nowrap;
+            }
+
+                nav > ul > li > a > ion-icon {
+                    width: 20px;
+                    height: 20px;
+                    color: #c90009;
+                }
+
+.top-news {
+    display: flex;
+}
+
+.category,
+.news,
+.advertisement {
+    display: flex;
+    flex-direction: column;
+}
+
+.category {
+    flex: 0.2;
+}
+
+.news {
+    flex: 0.55;
+}
+
+.advertisement {
+    flex: 0.25;
+}
+
+.category a {
+    border-top: 1px dashed #d9d9d9;
+    padding: 11px 0;
+    font-size: 14px;
+    line-height: 18px;
+    color: #404040;
+    font-weight: 400;
+    padding-right: 16px;
+}
+
+    .category a:hover {
+        color: #c90009;
+    }
+
+.category > div {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    width: 100%;
+    border-top: none;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: #565656;
+    text-align: left;
+    gap: 4px;
+    margin: 11px 0px;
+    padding-right: 16px;
+}
+
+.news-hot {
+    padding: 15px;
+}
+
+    .news-hot > div {
+        display: flex;
+        flex-direction: column;
+        height: 100%;
+        padding: 0px 15px;
+    }
+
+.cards {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    padding: 0px 15px;
+}
+
+    .cards .card {
+        display: flex;
+        flex-direction: column;
+        width: 216px;
+        height: 100%;
+        gap: 4px;
+        font-weight: 500;
+        font-size: 18px;
+        line-height: 24px;
+        color: #222;
+    }

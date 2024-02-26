@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TruongVanDat_2180608812_Bai
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TruongVanDat_2180608812_Bai2", "TruongVanDat_2180608812_Bai2\TruongVanDat_2180608812_Bai2.csproj", "{6D3E2458-A22B-46F8-9FC1-EEE9C239C478}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TruongVanDat_2180608812_Bai3", "TruongVanDat_2180608812_Bai3\TruongVanDat_2180608812_Bai3.csproj", "{6218CD32-00F0-48C0-B8AA-3A0B05CEB5A9}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{6D3E2458-A22B-46F8-9FC1-EEE9C239C478}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6D3E2458-A22B-46F8-9FC1-EEE9C239C478}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6D3E2458-A22B-46F8-9FC1-EEE9C239C478}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6218CD32-00F0-48C0-B8AA-3A0B05CEB5A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6218CD32-00F0-48C0-B8AA-3A0B05CEB5A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6218CD32-00F0-48C0-B8AA-3A0B05CEB5A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6218CD32-00F0-48C0-B8AA-3A0B05CEB5A9}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

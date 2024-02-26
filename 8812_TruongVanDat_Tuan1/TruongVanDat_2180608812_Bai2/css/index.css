@@ -1,6 +1,4 @@
-﻿body {
-}
-/*
+﻿/*
   1. Use a more-intuitive box-sizing model.
 */
 *,
@@ -72,9 +70,9 @@ a {
     font-family: Arial, Helvetica, sans-serif;
 }
 
-    a:hover {
-        color: #006ba0 !important;
-    }
+a:hover {
+    color: #006ba0 !important;
+}
 
 .container {
     display: flex;
@@ -105,27 +103,27 @@ nav ul {
     gap: 24px;
 }
 
-    nav ul li {
-        display: inline-flex;
-        height: 100%;
-        padding: 12px 0px;
-        height: 100%;
-    }
+nav ul li {
+    display: inline-flex;
+    height: 100%;
+    padding: 12px 0px;
+    height: 100%;
+}
 
-        nav ul li:hover {
-            border-bottom: 3px solid #04b2f7;
-            color: #04b2f7;
-        }
+nav ul li:hover {
+    border-bottom: 3px solid #04b2f7;
+    color: #04b2f7;
+}
 
-        nav ul li a {
-            line-height: 30px;
-            color: inherit;
-        }
+nav ul li a {
+    line-height: 30px;
+    color: inherit;
+}
 
-        nav ul li:last-child {
-            color: #030101a8 !important;
-            border: none;
-        }
+nav ul li:last-child {
+    color: #030101a8 !important;
+    border: none;
+}
 
 header button {
     background-color: white;
@@ -142,69 +140,70 @@ header button {
     margin: 16px 0px;
 }
 
-    .hashtag div {
-        margin-left: 20px;
-        border-radius: 20px;
-        background-color: #dddd;
-        padding: 2px 8px;
-        font-size: 12px;
-        font-weight: 400;
-    }
+.hashtag div {
+    margin-left: 20px;
+    border-radius: 20px;
+    background-color: #dddd;
+    padding: 2px 8px;
+    font-size: 12px;
+    font-weight: 400;
+}
 
 .top-news {
+    align-items: start;
     justify-content: left;
     gap: 20px;
 }
 
-    .top-news .left {
-        flex-direction: column;
-        width: 310px;
-    }
+.top-news .left {
+    flex-direction: column;
+    width: 310px;
+}
 
-        .top-news .left div {
-            padding-bottom: 15px;
-            margin-bottom: 15px;
-            border-bottom: 1px solid #dedede;
-            align-items: start;
-            gap: 12px;
-            font-size: 14px;
-            font-weight: 700;
-            text-align: left;
-        }
+.top-news .left div {
+    padding-bottom: 15px;
+    margin-bottom: 15px;
+    border-bottom: 1px solid #dedede;
+    align-items: start;
+    gap: 12px;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: left;
+}
 
-        .top-news .left img {
-            width: 120px;
-        }
+.top-news .left img {
+    width: 120px;
+}
 
-    .top-news .center {
-        width: 492px;
-    }
+.top-news .center {
+    width: 492px;
+}
 
-        .top-news .center h2 {
-            font-size: 2rem;
-            line-height: 1.2;
-            letter-spacing: -1.5px;
-            margin-top: 12px;
-            font-weight: bold;
-            margin-bottom: 8px;
-            cursor: pointer;
-        }
+.top-news .center h2 {
+    font-size: 2rem;
+    line-height: 1.2;
+    letter-spacing: -1.5px;
+    margin-top: 12px;
+    font-weight: bold;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
 
-            .top-news .center h2:hover {
-                color: #006ba0;
-            }
+.top-news .center h2:hover {
+    color: #006ba0;
+}
 
-        .top-news .center ul {
-            margin-top: 10px;
-        }
+.top-news .center ul {
+    margin-top: 10px;
+}
 
-    .top-news .right {
-        width: 256px;
-    }
+.top-news .right {
+    width: 256px;
+}
 
-        .top-news .right div {
-            margin-bottom: 25px;
-        }
+.top-news .right div {
+    margin-bottom: 25px;
+}
 
 .books h3 {
     color: #000;
@@ -216,16 +215,16 @@ header button {
     font-size: 1.25rem;
 }
 
-    .books h3::before {
-        content: '';
-        position: absolute;
-        width: 5px;
-        left: 5px;
-        top: 2px;
-        bottom: 2px;
-        transform: skew(-20deg);
-        background-color: #dd3333;
-    }
+.books h3::before {
+    content: '';
+    position: absolute;
+    width: 5px;
+    left: 5px;
+    top: 2px;
+    bottom: 2px;
+    transform: skew(-20deg);
+    background-color: #dd3333;
+}
 
 .books hr {
     margin: 10px 0px;
@@ -241,16 +240,16 @@ header button {
     border-radius: 6px;
 }
 
-    .books .card img {
-        border-top-left-radius: 6px;
-        border-top-right-radius: 6px;
-        height: 135px;
-    }
+.books .card img {
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    height: 135px;
+}
 
-    .books .card div {
-        padding: 0px 10px 10px;
-    }
+.books .card div {
+    padding: 0px 10px 10px;
+}
 
-    .books .card a {
-        color: #000;
-    }
+.books .card a {
+    color: #000;
+}
