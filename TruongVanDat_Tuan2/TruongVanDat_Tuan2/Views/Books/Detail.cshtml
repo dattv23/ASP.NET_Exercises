@@ -1,0 +1,23 @@
+﻿@model TruongVanDat_Tuan2.Models.Book
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@Html.DisplayFor(model => model.Title)</h2>
+<div class="col-sm-12 col-md-12">
+    <div class="thumbnail">
+        <img src="/@Html.DisplayFor(model=>model.Cover)" alt="thumbnail">
+    </div>
+    <div class="caption">
+        <p>@Html.DisplayNameFor(model => model.Author): @Html.DisplayFor(model => model.Author)</p>
+        <p>@Html.DisplayNameFor(model => model.PublicYear): @Html.DisplayFor(model => model.PublicYear)</p>
+        <p>@Html.DisplayNameFor(model => model.Price): @Html.DisplayFor(model => model.Price)</p>
+        <p>
+            <a href="#" class="btn btn-primary" role="button">Buy</a>
+            @Html.ActionLink("Back", "ListBooks", "", new { @class = "btn btn-info" })
+        </p>
+    </div>
+</div>
+
+

@@ -1,0 +1,32 @@
+﻿@{
+    ViewBag.Title = "ListBooks";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>@ViewBag.TitlePageName</h2>
+<div class="row">
+    @foreach (var item in Model)
+    {
+        <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12">
+            <div class="card">
+                <div class="card-header">
+                    @item.Title
+                    @Html.ActionLink("Edit", "Edit", new { id = item.Id }, new { @class = "float-end" })
+                </div>
+                <div class="card-body">
+                    <p><strong>Author: </strong>@item.Author</p>
+                    <p><strong>PublicYear: </strong>@item.PublicYear</p>
+                    <p><strong>Price: </strong>@item.Price</p>
+                    <p><img src="/@item.Cover" alt="Alternate Text" /></p>
+                </div>
+                <div class="card-footer">
+                    <div class="float-end">
+                        <a class="btn btn-primary">Order</a>
+                        @Html.ActionLink("Read more...", "Detail", new { id = item.Id }, new { @class = "btn btn-default" })
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+</div>
+
