@@ -163,6 +163,7 @@ namespace TruongVanDat_Tuan2.Controllers
         {
             try
             {
+                book.Id = listBooks.Count + 1;
                 book.Cover = "Content/images/" + book.CoverFile.FileName;
                 listBooks.Add(book);
                 return View("ListBooks", listBooks);
