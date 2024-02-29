@@ -20,6 +20,9 @@
                     <p><img src="/@item.Cover" alt="Alternate Text" /></p>
                 </div>
                 <div class="card-footer">
+                    <div class="float-start">
+                        @Html.ActionLink("Delete", "Delete", new { id = item.Id }, new { @class = "btn btn-danger" })
+                    </div>
                     <div class="float-end">
                         <a class="btn btn-primary">Order</a>
                         @Html.ActionLink("Read more...", "Detail", new { id = item.Id }, new { @class = "btn btn-default" })

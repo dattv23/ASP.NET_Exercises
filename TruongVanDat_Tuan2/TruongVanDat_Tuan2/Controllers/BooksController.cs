@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
@@ -13,8 +14,8 @@ namespace TruongVanDat_Tuan2.Controllers
         public BooksController()
         {
             listBooks = new List<Book>();
-            listBooks.Add(new Book() 
-            { 
+            listBooks.Add(new Book()
+            {
                 Id = 1,
                 Title = "Đi tìm lẽ sống",
                 Author = "Không biết",
@@ -24,7 +25,7 @@ namespace TruongVanDat_Tuan2.Controllers
             });
             listBooks.Add(new Book()
             {
-                Id = 1,
+                Id = 2,
                 Title = "7 Thói quen hiệu quả",
                 Author = "Không biết",
                 PublicYear = 2010,
@@ -33,7 +34,7 @@ namespace TruongVanDat_Tuan2.Controllers
             });
             listBooks.Add(new Book()
             {
-                Id = 1,
+                Id = 3,
                 Title = "Hạt giống tâm hồn",
                 Author = "Quên rồi",
                 PublicYear = 1999,
@@ -42,7 +43,7 @@ namespace TruongVanDat_Tuan2.Controllers
             });
             listBooks.Add(new Book()
             {
-                Id = 1,
+                Id = 4,
                 Title = "Từ thất bại đến thành công",
                 Author = "Không biết",
                 PublicYear = 2020,
@@ -102,6 +103,10 @@ namespace TruongVanDat_Tuan2.Controllers
                     editBook.Cover = book.Cover;
                     editBook.Price = book.Price;
                     editBook.PublicYear = book.PublicYear;
+                    if (book.CoverFile != null)
+                    {
+                        editBook.Cover = "Content/images/" + book.CoverFile.FileName;
+                    }
                     return View("ListBooks", listBooks);
                 }
                 catch (Exception ex)
@@ -115,6 +120,57 @@ namespace TruongVanDat_Tuan2.Controllers
                 return View(book);
             }
 
+        }
+
+        // Delete a book
+        public ActionResult Delete(int? id)
+        {
+            if (id == null)
+            {
+                return HttpNotFound();
+            }
+            Book book = listBooks.Find(x => x.Id == id);
+            if (book == null)
+            {
+                return HttpNotFound();
+            }
+            return View(book);
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Delete(Book book)
+        {
+
+            try
+            {
+                listBooks.Remove(listBooks.Find(item => item.Id == book.Id));
+                return View("ListBooks", listBooks);
+            }
+            catch (Exception ex)
+            {
+                return HttpNotFound();
+            }
+        }
+
+        public ActionResult Add()
+        {
+            ViewBag.TitlePageName = "ADD A BOOK";
+            return View();
+        }
+
+        [HttpPost]
+        public ActionResult Add(Book book)
+        {
+            try
+            {
+                book.Cover = "Content/images/" + book.CoverFile.FileName;
+                listBooks.Add(book);
+                return View("ListBooks", listBooks);
+            }
+            catch (Exception ex)
+            {
+                return HttpNotFound();
+            }
         }
     }
 }

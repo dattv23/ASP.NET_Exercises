@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.ComponentModel.DataAnnotations;
+using System.IO;
 using System.Linq;
 using System.Web;
 
@@ -19,5 +21,9 @@ namespace TruongVanDat_Tuan2.Models
         public int PublicYear { get; set; }
         public double Price { get; set; }
         public string Cover { get; set; }
+
+        [Display(Name = "Upload image")]
+        [Required(ErrorMessage = "File image is required")]
+        public HttpPostedFileBase CoverFile { get; set; }
     }
 }
