@@ -1,0 +1,18 @@
+﻿<?xml version="1.0" encoding="utf-8"?><Database Name="NhaSach" Class="MyDataDataContext" xmlns="http://schemas.microsoft.com/linqtosql/dbml/2007">
+  <Table Name="dbo.Sach" Member="Saches">
+    <Type Name="Sach">
+      <Column Name="masach" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="maloai" Type="System.Int32" DbType="Int" CanBeNull="true" />
+      <Column Name="tensach" Type="System.String" DbType="NVarChar(50)" CanBeNull="true" />
+      <Column Name="hinh" Type="System.String" DbType="VarChar(50)" CanBeNull="true" />
+      <Association Name="TheLoai_Sach" Member="TheLoai" ThisKey="maloai" OtherKey="maloai" Type="TheLoai" IsForeignKey="true" />
+    </Type>
+  </Table>
+  <Table Name="dbo.TheLoai" Member="TheLoais">
+    <Type Name="TheLoai">
+      <Column Name="maloai" Type="System.Int32" DbType="Int NOT NULL IDENTITY" IsPrimaryKey="true" IsDbGenerated="true" CanBeNull="false" />
+      <Column Name="tenloai" Type="System.String" DbType="NVarChar(30)" CanBeNull="true" />
+      <Association Name="TheLoai_Sach" Member="Saches" ThisKey="maloai" OtherKey="maloai" Type="Sach" />
+    </Type>
+  </Table>
+</Database>

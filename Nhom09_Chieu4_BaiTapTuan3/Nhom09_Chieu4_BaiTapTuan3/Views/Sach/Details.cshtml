@@ -1,0 +1,46 @@
+﻿@model Nhom09_Chieu4_BaiTapTuan3.Models.Sach
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section CustomStyles {
+    <li style="position: relative;">@Html.ActionLink("The Loai", "Index", "TheLoai", new { area = "" }, new { @class = "nav-link", style = "font-size: 18px; font-weight: 600" })</li>
+    <li style="position: relative;">@Html.ActionLink("Sach", "Index", "Sach", new { area = "" }, new { @class = "nav-link nav_sach", style = "font-size: 18px; font-weight: 600" })</li>
+}
+<h2 style="color: #808080">DETAIL : @Html.DisplayFor(model => model.tensach)</h2>
+
+<div>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Mã Loại
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.maloai)
+        </dd>
+
+        <dt>
+            Tên Sách
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tensach)
+        </dd>
+
+        <dt>
+            Cover
+
+        </dt>
+
+        <dd>
+            <img src="@Model.hinh" alt="Alternate Text" />
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.masach }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

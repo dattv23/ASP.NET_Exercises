@@ -1,0 +1,61 @@
+﻿@model Nhom09_Chieu4_BaiTapTuan3.Models.Sach
+
+@{
+    ViewBag.Title = "Create";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section CustomStyles {
+    <li style="position: relative;">@Html.ActionLink("The Loai", "Index", "TheLoai", new { area = "" }, new { @class = "nav-link", style="font-size: 18px; font-weight: 600" })</li>
+    <li style="position: relative;">@Html.ActionLink("Sach", "Index", "Sach", new { area = "" }, new { @class = "nav-link nav_sach", style = "font-size: 18px; font-weight: 600" })</li>
+}
+<h2>CREATE NEW BOOK </h2>
+
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+<div class="form-horizontal">
+    <hr />
+    @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+        <div class="form-group mb-3">
+            <span>Loại sách</span>
+            <div class="col-md-10">
+                @Html.DropDownList("maloai", new SelectList(ViewBag.categories, "maloai", "tenloai"), "Chọn loại sách", new { @class = "form-control" })
+                @Html.ValidationMessageFor(model => model.maloai, "", new { @class = "text-danger" })
+            </div>
+        </div>
+   
+
+
+    <div class="form-group mb-3">
+        <span>Tên Sách</span>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.tensach, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.tensach, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group mb-3">
+        <span>Hình</span>
+        <div class="col-md-10">
+            @Html.EditorFor(model => model.hinh, new { htmlAttributes = new { @class = "form-control" } })
+            @Html.ValidationMessageFor(model => model.hinh, "", new { @class = "text-danger" })
+        </div>
+    </div>
+
+    <div class="form-group mb-3">
+        <div class="col-md-offset-2 col-md-10">
+            <input type="submit" value="Create" class="btn btn-primary" />
+        </div>
+    </div>
+</div>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

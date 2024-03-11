@@ -1,0 +1,30 @@
+﻿@model Nhom09_Chieu4_BaiTapTuan3.Models.TheLoai
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section CustomStyles {
+    <li style="position: relative;">@Html.ActionLink("The Loai", "Index", "TheLoai", new { area = "" }, new { @class = "nav-link nav_theloai", style = "font-size: 18px; font-weight: 600" })</li>
+    <li style="position: relative;">@Html.ActionLink("Sach", "Index", "Sach", new { area = "" }, new { @class = "nav-link", style = "font-size: 18px; font-weight: 600" })</li>
+}
+<h2>Details</h2>
+
+<div>
+    <h4>TheLoai</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.tenloai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tenloai)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.maloai }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

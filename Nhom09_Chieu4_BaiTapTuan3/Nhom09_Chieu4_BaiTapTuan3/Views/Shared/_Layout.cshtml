@@ -1,0 +1,61 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="~/Content/Site.css" rel="stylesheet" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-light bg-light" style="background-image: linear-gradient(45deg, #FA8BFF 0%, #822bff 52%, #2BFF88 90%); position: sticky; top: 0; z-index: 1; min-height: 80px">
+        <div class="container-fluid">
+            @Html.ActionLink("BOOK MARKET", "Index", "Sach", new { area = "" }, new { @class = "navbar-brand" })
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    @*@<li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link "})</li>
+                    <li>@Html.ActionLink("About", "About", "Home", new { area = "" }, new { @class = "nav-link"})</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link"})</li>*@
+                    @RenderSection("CustomStyles", required: false)
+                </ul>
+
+                <div class="your-custom-class" style="align-self: center; margin-top: 10px">
+                    @RenderSection("ThanhSearch", required: false)
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+
+
+
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p style="color: #5b5b57; font-weight: 300; font-size: 14px">&copy; @DateTime.Now.Year - Bài Tập Nhóm tuần 3</p>
+            <div class="d-flex align-items-baseline">
+                <p class="me-2" style="font-weight: 600; color: #5b5b57">KẾT NỐI VỚI CHÚNG TÔI </p>
+                <i class="fa-brands fa-facebook me-3" style="color: blue"></i>
+                <i class="fa-brands fa-twitter me-3" style="color: #8c34bb" ></i>
+                <i class="fa-brands fa-youtube me-3" style="color: #ea2424" ></i>
+                <i class="fa-brands fa-telegram me-3" style="color: #8c34bb"></i>
+            </div>
+        </footer>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery")
+    @Scripts.Render("~/bundles/bootstrap")
+    @RenderSection("scripts", required: false)
+</body>
+</html>

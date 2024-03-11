@@ -1,0 +1,13 @@
+﻿@{
+    ViewBag.Title = "About";
+}
+@section CustomStyles {
+    <li style="position: relative;">@Html.ActionLink("The Loai", "Index", "TheLoai", new { area = "" }, new { @class = "nav-link" })</li>
+    <li style="position: relative;">@Html.ActionLink("Sach", "Index", "Sach", new { area = "" }, new { @class = "nav-link" })</li>
+}
+<main aria-labelledby="title">
+    <h2 id="title">@ViewBag.Title.</h2>
+    <h3>@ViewBag.Message</h3>
+
+    <p>Use this area to provide additional information.</p>
+</main>

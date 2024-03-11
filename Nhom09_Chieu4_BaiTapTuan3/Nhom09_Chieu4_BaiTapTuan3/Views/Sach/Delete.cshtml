@@ -1,0 +1,53 @@
+﻿@model Nhom09_Chieu4_BaiTapTuan3.Models.Sach
+
+@{
+    ViewBag.Title = "Delete";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@section CustomStyles {
+    <li style="position: relative;">@Html.ActionLink("The Loai", "Index", "TheLoai", new { area = "" }, new { @class = "nav-link", style = "font-size: 18px; font-weight: 600" })</li>
+    <li style="position: relative;">@Html.ActionLink("Sach", "Index", "Sach", new { area = "" }, new { @class = "nav-link nav_sach", style = "font-size: 18px; font-weight: 600" })</li>
+}
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<div>
+    <h4>Sach</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            Mã Loại
+        </dt>
+
+        <dd class="card" style="width: 100vw; max-width: 250px">
+            @Html.DisplayFor(model => model.maloai)
+        </dd>
+
+        <dt>
+            Tên Sách
+        </dt>
+
+        <dd class="card" style="width: 100vw; max-width: 250px">
+            @Html.DisplayFor(model => model.tensach)
+        </dd>
+
+        <dt>
+            Cover
+        </dt>
+
+        <dd class="card" style="width: 100vw; max-width: 250px">
+            @Html.DisplayFor(model => model.hinh)
+        </dd>
+
+    </dl>
+
+    @using (Html.BeginForm())
+    {
+        @Html.AntiForgeryToken()
+
+        <div class="form-actions no-color">
+            <input type="submit" value="Delete" class="btn btn-danger" /> |
+            @Html.ActionLink("Back to List", "Index")
+        </div>
+    }
+</div>

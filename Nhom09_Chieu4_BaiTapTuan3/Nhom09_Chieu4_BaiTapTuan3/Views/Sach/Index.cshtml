@@ -1,0 +1,67 @@
+﻿@model IEnumerable<Nhom09_Chieu4_BaiTapTuan3.Models.Sach>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+@section ThanhSearch {
+    @using (Html.BeginForm("Index", "Sach", FormMethod.Get))
+    {
+        <div class="input-group mb-3">
+            <input type="text" class="form-control" name="searchTerm" placeholder="Search Sach">
+            <button class="btn btn-outline-secondary" type="submit" style="background-color: #ccc; border-color: #fff">Search</button>
+        </div>
+    }
+}
+
+@section CustomStyles {
+    <li style="position: relative;">@Html.ActionLink("The Loai", "Index", "TheLoai", new { area = "" }, new { @class = "nav-link", style = "font-size: 18px; font-weight: 600" })</li>
+    <li style="position: relative;">@Html.ActionLink("Sach", "Index", "Sach", new { area = "" }, new { @class = "nav-link nav_sach", style = "font-size: 18px; font-weight: 600" })</li>
+}
+
+
+
+@if (Model.Count() != 0)
+{
+    <p>
+        @Html.ActionLink("Create New", "Create", null, new { @class = "btn btn-primary ms-3" })
+    </p>
+    <div class="container">
+        <div class="row">
+            @foreach (var item in Model)
+            {
+                <div class="col-lg-4 col-md-6 col-sm-8 col-xs-12 mb-4">
+                    <div class="card">
+                        <div class="card-header d-flex justify-content-between">
+                            <p>Thông tin sách</p>
+                            @Html.ActionLink("Edit", "Edit", new { id = item.masach }, new { @class = "float-end" })
+                        </div>
+                        <div class="card-body" style="min-height: 500px">
+                            <p><strong>Name: </strong>@item.tensach</p>
+                            <p><strong>Mã Loại: </strong>@item.maloai</p>
+                            <span><img src="@item.hinh" alt="Alternate Text"></span>
+                        </div>
+                        <div class="card-footer d-flex justify-content-between" style="min-width: 285px">
+                            <div style="background-image: radial-gradient( circle farthest-corner at 17.1% 22.8%, rgba(226,24,24,1) 0%, rgba(160,6,6,1) 90% ); border-radius: 6px " class="my-btn1">
+                                @Html.ActionLink("Delete", "Delete", new { id = item.masach }, new { @class = "btn btn-danger " })
+                            </div>
+                            <div class="d-flex justify-content-between ">
+                                <a class="btn btn-primary">Order</a>
+                                @Html.ActionLink("Read more...", "Details", new { id = item.masach }, new { @class = "btn" })
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+        </div>
+    </div>
+}
+else
+{
+    <p style="font-size: 30px; font-weight: 600">404 Not Found</p>
+}
+
+@if (@ViewBag.searchTerm != null) {
+    @Html.ActionLink("Back", "Index", "Sach", new { @class = "btn btn-info ms-3" })
+}

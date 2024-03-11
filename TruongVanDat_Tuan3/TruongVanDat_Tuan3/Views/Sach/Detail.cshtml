@@ -1,0 +1,43 @@
+﻿@model TruongVanDat_Tuan3.Models.Sach
+
+@{
+    ViewBag.Title = "Detail";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Detail</h2>
+
+<div>
+    <h4>Sach</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.maloai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.maloai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.tensach)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.tensach)
+        </dd>
+
+        <dt>
+            <img src="@Model.hinh" alt="Alternate Text" />
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.hinh)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.masach }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
