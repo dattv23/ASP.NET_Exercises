@@ -32,7 +32,9 @@ CRUD with ASP.Net MVC
 ![image](https://github.com/dattv23/ASP.NET_Exercises/assets/94770505/f90891fa-bbd7-4065-aab4-ff311347b441)
 
 
-
+# Week 3
+- Connect database use SQL Server
+- Implement features interact with db (CRUD) same week 2
 
 
 
