@@ -22,9 +22,9 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0">
-                    @*@<li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link "})</li>
-                    <li>@Html.ActionLink("About", "About", "Home", new { area = "" }, new { @class = "nav-link"})</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link"})</li>*@
+                    <li>@Html.ActionLink("Home", "Index", "Home", new { area = "" }, new { @class = "nav-link " })</li>
+                    @*@<li>@Html.ActionLink("About", "About", "Home", new { area = "" }, new { @class = "nav-link"})</li>
+                        <li>@Html.ActionLink("Contact", "Contact", "Home", new { area = "" }, new { @class = "nav-link"})</li>*@
                     @RenderSection("CustomStyles", required: false)
                 </ul>
 
@@ -47,8 +47,8 @@
             <div class="d-flex align-items-baseline">
                 <p class="me-2" style="font-weight: 600; color: #5b5b57">KẾT NỐI VỚI CHÚNG TÔI </p>
                 <i class="fa-brands fa-facebook me-3" style="color: blue"></i>
-                <i class="fa-brands fa-twitter me-3" style="color: #8c34bb" ></i>
-                <i class="fa-brands fa-youtube me-3" style="color: #ea2424" ></i>
+                <i class="fa-brands fa-twitter me-3" style="color: #8c34bb"></i>
+                <i class="fa-brands fa-youtube me-3" style="color: #ea2424"></i>
                 <i class="fa-brands fa-telegram me-3" style="color: #8c34bb"></i>
             </div>
         </footer>
